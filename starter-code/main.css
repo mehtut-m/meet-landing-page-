@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*---Mobile First Style---*/
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+}
+p {
+    color: hsl(240, 10%, 57%);
+    line-height: 26px;
+    font-size: 1rem;
+    white-space: break-spaces;
+}
+
+
+button {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 30px;
+    color: hsl(0,0%,98%);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+
+.header {
+    display: flex;
+    height: 140px;
+    width: 100vw;
+}
+.header > img {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+
+/*** Hero Section ***/
+
+.hero-content-ctn {
+    display: flex;
+    justify-content: center;
+    height: 9.5rem;
+    width: 100%;
+    overflow: hidden;
+}
+.hero-left, .hero-right {
+    position: relative;
+    width: 207px;
+}
+.hero-left {
+    left: -8px;
+}
+.hero-right {
+    right: -8px;
+}
+
+.tablet-hero {
+    display: none;
+}
+
+.hero-desktop-left, .hero-desktop-right {
+    display: none;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-weight: 900;
+    margin: 24px;
+}
+
+.hero-content p {
+    text-align: center;
+    margin: 1.5rem;
+}
+.hero-btn-ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.download-btn {
+    background-color: hsl(192, 37%, 48%);
+    width: 193px;
+    height: 58px;
+    margin-bottom: 1rem;
+}
+.download-btn:hover {
+    background-color: #71C0D4;
+}
+.download-btn > span {
+    color: hsl(192, 90%, 77%);
+}
+
+.info-btn {
+    background-color: hsl(268, 34%, 53%);
+    width: 139px;
+    height: 58px;
+}
+
+.info-btn:hover {
+    background-color: #B18BDD;
+}
+
+/***Image List Section**/
+.img-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 16rem));
+    gap: 1.5em;
+    justify-content: center;
+    margin: 1.5rem;
+}
+
+.img-grid img {
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+/*--- Section Id ---*/
+.section-id {
+    position: relative;
+    bottom: -26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+
+.section-number {
+    background-color: hsl(0, 0%, 98%); 
+    border: 1px solid hsl(240, 10%, 57%);
+    border-radius: 50%;
+    font-weight: 900;
+    text-align: center;
+    width: 56px;
+    height: 56px;
+    padding: 15px;
+}
+
+.section-pipe {
+    border-left: 1px solid hsl(240, 10%, 57%);
+    height: 5.25rem;
+}
+
+.section-one {
+    margin-top: 30px;
+    margin-bottom: 5.75rem;
+}
+
+.section-two {
+    margin-top: 2.25rem;
+}
+
+/***Features section***/
+.feature {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.feature > h2 {
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 1.25;
+    margin-bottom: 2rem;
+    
+}
+
+.feature > h3 {
+    color: rgba(77, 150, 168, 1);
+    font: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature > p {
+    margin-bottom: 1.5rem;
+}
+
+/*** Call to Action ***/
+.cta {
+
+    background: url(./assets/mobile/image-footer.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(77, 150, 168, 1);
+    background-blend-mode: multiply;
+    color: hsl(0,0%,98%);
+    height: 26.75rem;
+    padding: 92px 24px 72px;
+    text-align: center;
+
+}
+.cta-ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    height: 17.5rem;
+}
+
+.cta-ctn >.download-btn {
+    background-color: hsl(268, 34%, 53%);
+    margin: 0.5rem auto 0;
+}
+
+.cta-ctn >.download-btn:hover {
+    background-color: #B18BDD;
+}
+
+.cta-ctn .version-id {
+    color: hsl(268, 100%, 86%);
+}
+.cta-ctn >h2 {
+    font-size: 2rem;
+    font-weight: 900;
+}
+.cta-ctn > p {
+    color: inherit;
+}
+
+
+/***Tablet Style***/
+@media (min-width: 670px) {
+    /*** Hero Section ***/
+    .hero-content-ctn {
+        height: 303px;
+    }
+    .hero-left, .hero-right {
+        display: none;
+    }
+
+    .tablet-hero {
+        display: block;
+        width: 820px;
+    }
+
+    .hero-btn-ctn {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .hero-btn-ctn > button {
+        margin: 8px;
+    }
+
+    .hero-content {
+        margin: 4.5rem auto;
+        max-width: 457px;
+        width: 80%;
+    }
+
+    .hero-content > p {
+        font-size: 18px;
+    }
+    /***Image List Section**/
+    .img-grid {
+        gap: 0.7em;
+        margin: 1.5rem;
+    }
+
+    .img-grid {
+        grid-template-columns: repeat(4, minmax(0, 16rem));
+    }
+    /*** Features Section ***/
+
+    .feature {
+        max-width: 630px;
+        margin: auto;
+    }
+    .feature > h2 {
+        margin: auto auto 2rem;
+        max-width: 445px;
+        font-size: 2.5rem;
+    }
+    /*** Call to Action ***/
+    .cta {
+        justify-content: center;
+        background: url(./assets/tablet/image-footer.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(77, 150, 168, 1);
+        background-blend-mode: multiply;
+    }
+    .cta-ctn {
+        gap: 11px;
+        max-width: 573px;
+        margin: auto;
+    }
+
+}
+
+
+/***Desktop Viewport Style***/
+
+@media (min-width: 1440px) {
+    p {
+
+        font-size: 18px;
+    }
+    /***Hero Image***/
+    .hero-content-ctn {
+        display: none;
+    } 
+    .hero-ctn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 72px 0 ;
+        position: relative;
+    }
+
+    .hero-desktop-left, .hero-desktop-right {
+        display: inline;
+        overflow: hidden;
+        position: relative;
+    }
+    .hero-desktop-left {
+        right: 90px;
+    }
+    .hero-desktop-right {
+        left: 90px;
+    }
+
+    .hero-content {
+        min-width: 540px;
+        margin: 0;
+    }
+
+    .hero-content > h1 {
+        font-size: 4rem;
+    }
+
+    /***Image List Section**/
+    .img-grid {
+        gap: 2em;
+    }
+
+    /*** Call to Action ***/
+    .cta {
+        background: url(./assets/desktop/image-footer.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(77, 150, 168, 1);
+        background-blend-mode: multiply;
+        text-align: initial;
+    }
+    .cta-ctn {
+        max-width: 1110px;
+        flex-direction: row;
+        gap: 5.75rem;
+    }
+
+    .cta-ctn > * {
+        max-width: 350px;
+    }
+}
